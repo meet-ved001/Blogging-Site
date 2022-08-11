@@ -1,0 +1,16 @@
+<% include ./partials/header %>
+
+<h1>HOME</h1>
+<p><%=StartingContent%></p>
+
+<%addOnHomePage.forEach(function(jsObject){%>
+  <h1><%=jsObject.title%> </h1>
+  <p><%=jsObject.content.substr(0,100)+"..."%>
+ <a href="/posts/<%=jsObject.title%>">Read more</a>
+  </p>
+
+  <%console.log("title: "+jsObject.title);%>
+  <%console.log("content: "+jsObject.content);%>
+
+<%});%>
+<% include ./partials/footer %>
